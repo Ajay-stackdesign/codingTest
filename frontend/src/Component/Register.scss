@@ -1,0 +1,114 @@
+@mixin direction {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  //   border-radius: 50px;
+  //   background: #e0e0e0;
+  //   box-shadow: 20px 20px 60px #bebebe, -20px -20px 60px #ffffff;
+}
+
+.register__form {
+  box-shadow: 0 3px 10px;
+  width: 50vw;
+  height: 100vh;
+  display: grid;
+  place-items: center;
+  height: 5px;
+  z-index: 0;
+  width: 96%;
+  left: 3.7%;
+  top: -6px;
+  // box-shadow: 3px 3px 5px 6px #ccc;
+  box-shadow: 500px 10px;
+  .register__header {
+    background-color: #00695c;
+    width: 500px;
+    height: 150px;
+    h3 {
+      center {
+        color: white;
+      }
+    }
+    h4 {
+      color: white;
+    }
+  }
+  .register__candidate {
+    display: flex;
+    position: relative;
+    bottom: 50px;
+    h3 {
+      padding: 20px;
+      background-color: white;
+      width: 150px;
+      border-radius: 10px;
+      &:hover {
+        background: #a1ad26;
+      }
+    }
+  }
+  .register__formSubmit {
+    form {
+      @include direction();
+      label {
+        img {
+          object-fit: contain;
+          height: 50px;
+          position: relative;
+          bottom: 70px;
+          left: 50px;
+        }
+      }
+      input {
+        padding: 10px;
+        font-size: 18px;
+        font-family: Roboto, "Lucida Sans", "Lucida Sans Regular",
+          "Lucida Grande", "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+        margin-top: 7px;
+        border-radius: 7px;
+      }
+      .textGender {
+        display: flex;
+        width: 100px;
+      }
+      .selcct__value {
+        height: 50px;
+        width: 265px;
+        border-radius: 20px;
+        &:focus {
+          outline: none;
+          border: none;
+          background-color: #a1ad26;
+          color: white;
+          border-radius: 20px;
+        }
+      }
+      button {
+        margin-top: 13px;
+        background-color: #00695c;
+        color: white;
+        width: 300px;
+        height: 40px;
+        font-size: 22px;
+        border-radius: 5px;
+      }
+    }
+  }
+  .register__privacy {
+    display: flex;
+  }
+  .register__Account {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    p {
+      padding-right: 10px;
+    }
+  }
+  .register__icon {
+    img {
+      padding: 20px;
+    }
+  }
+}
